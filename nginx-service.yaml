@@ -5,10 +5,11 @@ metadata:
   namespace: nginx-argo-app
 
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: nginx
   ports:
     - protocol: TCP
       port: 80
       targetPort: http
+      nodePort: 30006
