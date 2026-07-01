@@ -26,7 +26,7 @@ jobs:
           pip install -r requirements.txt
       
       - name: Run test and code coverage
-        run : pytest --cov=src
+        run : pytest --cov=core --cov=config
         
       - name: Coverage comment
         uses: py-cov-action/python-coverage-comment-action@v3
